@@ -1,0 +1,239 @@
+:root{
+    --dark-color: #19283f;
+    --green-color: rgb(51, 209, 204);
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* start components */
+.main-header{
+    text-align: center;
+    position: relative;
+}
+.main-header h3 {
+    color: var(--dark-color);
+}
+.main-header::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+}
+/* end components */
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .navbar-toggler {
+    border: 1px solid var(--green-color);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus{
+    color: var(--green-color);
+}
+
+.main-btn{
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+}
+
+.main-btn:hover{
+    color: var(--yellow-color);
+}
+
+.navbar svg {
+    color: var(--green-color);
+}
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+/* start landing */
+.landing{
+    background-color: var(--dark-color);
+    height: calc(100vh - 70px);
+}
+/* end landing */
+/* services */
+.services .coln {
+    position: relative;
+}
+.services .coln svg:first-child {
+    color: var(--section-color);
+    font-size: 200px;
+}
+
+.services .coln svg:last-of-type{
+    color: var(--green-color);
+    font-size: 60px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.services .coln h3 {
+    color: var(--yellow-color);
+}
+/* services */
+/* portfolio */
+.portfolio {
+    background-color: var(--section-color);
+}
+
+.portfolio ul li.active {
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+}
+
+.portfolio ul li:not(.active):hover {
+    color: var(--red-color);
+}
+
+.portfolio .row .photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .row .photo::before {
+    content: attr(data-attribute);
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(51, 209, 204, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.portfolio .row .photo:hover::before {
+    transform: translateX(0);
+}
+
+/* design */
+.design > p {
+    max-width: 500px;
+}
+
+/* team */
+.team{
+    background-color: var(--section-color);
+}
+
+.team .info h2 {
+    color: var(--yellow-color);
+}
+
+.team .row .desc h3 {
+    color: white;
+    background-color: var(--green-color);
+}
+
+.team .row .desc q {
+    background-color: white;
+    font-size: 13px;
+}
+/* project */
+.st-project {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+/* blogs */
+.blogs .row .blog {
+    border: 1px solid #777;
+    border-radius: 3px;
+}
+
+/* subscribe */
+
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe .row input {
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+.subscribe .row input:focus {
+    outline: none;
+}
+.subscribe .row input::placeholder{
+    color: white;
+}
+
+.subscribe .row .input {
+    position: relative;
+}
+.subscribe .row .input::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+}
+
+.subscribe .row button {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+/* footer */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer .row .info p span:first-of-type {
+    color: var(--green-color);
+}
+.footer .row .info p span:last-of-type {
+    color: var(--yellow-color);
+}
+
+.footer .social svg {
+    color: white;
+}
+
+.footer .social a {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 20px 10px;
+}
+.footer .social .facebook{
+    background-color: #1877f2;
+}
+.footer .social .x{
+    background-color: #1da1f2;
+}
+.footer .social .linkedin{
+    background-color: #0a66c2;
+}
+.footer .social .youtube{
+    background-color: #ff0000;
+}
+
